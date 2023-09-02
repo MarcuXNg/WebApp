@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Temperature conversion</title>
+</head>
+
+<html>
+
+<body>
+    <h1>Type in Celsius or Fahrenheit temperature you want to convert</h1>
+    <label for="celsiusInput">Enter the temperature in Celsius:</label>
+    <input type="number" id="celsiusInput" placeholder="Enter Celsius temperature">
+    <button onclick="convertToCelsius()">Convert to Fahrenheit</button>
+    <br>
+    <label for="fahrenheitInput">Enter the temperature in fahrenheit:</label>
+    <input type="number" id="fahrenheitInput" placeholder="Enter Fahrenheit temperature">
+    <button onclick="convertToFahrenheit()">Covert to Celsius</button>
+    <br>
+    <p id="result"></p>
+    <script src="ex1.js"></script>
+    <script>
+        function convertToCelsius() {
+            var celsiusInput = parseFloat(document.getElementById('celsiusInput').value);
+            //if no number is input then return please input a valid number
+            if (isNaN(celsiusInput)) {
+                document.getElementById('result').textContent = "Please input a valid number";
+            }
+            else {
+                var result = celsiusToFahrenheit(celsiusInput);
+                document.getElementById('result').textContent = celsiusInput + "°C is equal to " + result + "°F";
+            }
+        }
+
+        function convertToFahrenheit() {
+            var fahrenheitInput = parseFloat(document.getElementById('fahrenheitInput').value);
+            //if no number is input then return please input a valid number
+            if (isNaN(fahrenheitInput)) {
+                document.getElementById('result').textContent = "Please input a valid number";
+            }
+            else {
+                var result = fahrenheitToCelsius(fahrenheitInput);
+            document.getElementById('result').textContent = fahrenheitInput + "°F is equal to " + result + "°C";
+            }          
+        }
+    </script>
+</body>
+
+</html>

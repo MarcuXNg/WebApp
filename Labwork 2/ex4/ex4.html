@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 4</title>
+    <style>
+        .h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;       
+        }
+        .div1 {
+            float: left;
+            line-height: 1.5;
+        }
+        .div2 {
+            float: right;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="h1">Sign Up</h1>
+        </div>
+            <section>
+                <div class="div1">
+                    <label for="usernameInput">Username:</label>
+                    <br>
+                    <label for="passinput">Password:</label>
+                    <br>
+                    <label for="retypepassinput">Re-type Password:</label>
+                </div>
+                <div class="div2">
+                    <input type="text" id="username">
+                    <br>
+                    <input type="password" id="Password">
+                    <br>
+                    <input type="password" id="RetypePassword">
+                    <br>
+                    <button onclick="resetFields()">Reset</button>
+                    <button onclick="comparePasswords()">Submit</button>
+                </div>
+            </section>
+    
+        </div>
+
+    </div>
+
+    <script src="ex4.js"></script>
+</body>
+
+</html>
